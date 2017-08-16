@@ -4,4 +4,8 @@ from . import views
 urlpatterns = [
     url(r'^$', views.index),
     url(r'^register$', views.register),
+    url(r'^login$', views.login),
+    url(r'^home$', views.home),
+    url(r'^logout$', views.logout),
+    url(r'^delete/user/(?P<id>\d+)/$', views.delete),
 ]
