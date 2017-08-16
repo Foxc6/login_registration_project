@@ -3,6 +3,9 @@ from __future__ import unicode_literals
 
 from django.db import models
 
+class UserManager(models.Manager):
+	pass
+
 class User(models.Model):
 	first_name = models.CharField(max_length=255)
 	last_name = models.CharField(max_length=255)
@@ -10,3 +13,4 @@ class User(models.Model):
 	password = models.CharField(max_length=255)
 	created_at = models.DateTimeField(auto_now_add = True)
 	updated_at = models.DateTimeField(auto_now = True)
+	objects = UserManager()
